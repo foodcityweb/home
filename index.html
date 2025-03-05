@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food City</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Lobster&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@ericblade/quagga2/dist/quagga.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"><a href="#"> Facts </a></div>
+            <div class="col-1"><a href="#"> Feedback</a></div>
+            <div class="col-1"><a href="#"> Collaborate </a></div>
+            <div class="col-6">
+                <input type="text" id="search-bar" placeholder="   Search...">
+                <button id = "search-icon" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="col-1"><a href="#">Log in</a></div>
+            <div class="col-1"><a href="#">Sign Up</a></div>
+            <div class="col-1"><a href="#">Go Pro</a></div>
+        </div>
+    </div>
+
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="theme-toggle-btn">
+            Switch Theme
+        </button>
+    </div>
+
+    <div class="logo">
+        <p>FoodCity</p>
+    </div>
+
+    <!-- Start Scanner button -->
+    <button class="scanner" id="start-scanner-div">
+        <span>Start Scanning</span>
+    </button>
+
+    <!-- Scanner container (hidden by default) -->
+    <div class="scanner" id="scanner-container-div" style="display: none;">
+        <button class="cross-close" id="stop-scanner">
+            <span>x</span>
+        </button>
+        <div id="interactive" class="viewport"></div>
+    </div>
+
+    <!-- Result display area (hidden by default) -->
+    <div id="result-container-div" style="display: none;">
+        <div class="result-content">
+            <p>
+                <span id = "name-result"></span>
+                <span id = "barcode-result"></span>
+            </p>
+            <p id = "nutrients"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
